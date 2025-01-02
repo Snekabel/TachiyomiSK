@@ -25,7 +25,7 @@
         <item quantity="other">第 %1$s 章以及另外 %2$d 章</item>
     </plurals>
     <plurals name="num_trackers">
-        <item quantity="other">%d 個歷程平台</item>
+        <item quantity="other">%d個歷程平臺</item>
     </plurals>
     <plurals name="missing_chapters_warning">
         <item quantity="other">略過了 %d 章，也許是來源沒有這些章節，或其已被篩選規則排除</item>
@@ -53,5 +53,8 @@
     </plurals>
     <plurals name="upcoming_relative_time">
         <item quantity="other">%1$d 天後</item>
+    </plurals>
+    <plurals name="pref_pages">
+        <item quantity="other">%1$s pages</item>
     </plurals>
 </resources>

@@ -614,7 +614,6 @@
     <string name="delete_category">Usuń kategorię</string>
     <string name="internal_error">InternalError: sprawdź log błędów po więcej informacji</string>
     <string name="action_remove_everything">Usuń wszystko</string>
-    <string name="loader_rar5_error">Format RARv5 jest nieobsługiwany</string>
     <string name="error_user_agent_string_blank">Pole user agent nie może być puste</string>
     <string name="update_already_running">Aktualizacja już trwa</string>
     <string name="theme_tidalwave">Tsunami</string>
@@ -790,14 +789,13 @@
     <string name="invalid_backup_file_error">Pełny błąd:</string>
     <string name="track_activity_name">Login serwisu śledzącego</string>
     <string name="action_create">Utwórz</string>
-    <string name="pref_flash_page">Włącz przerwy między stronami</string>
+    <string name="pref_flash_page">Miganie przy zmianie strony</string>
     <string name="private_settings">Dołącz wrażliwe ustawienia (np. tokeny serwisu śledzącego)</string>
     <string name="last_auto_backup_info">Ostatnia automatyczna kopia zapasowa: %s</string>
     <string name="has_results">Ma wyniki</string>
     <string name="manga_display_interval_title">Oszacuj co</string>
     <string name="available_disk_space_info">Wolne: %1$s / Ogółem: %2$s</string>
     <string name="manga_interval_expected_update_soon">Wkrótce</string>
-    <string name="licensed_manga_chapters_error">Licencjonowany - Brak rozdziałów</string>
     <string name="skipped_reason_not_in_release_period">Pominięto, ponieważ nie spodziewano się dzisiaj żadnej publikacji</string>
     <string name="exclude_scanlators">Wyklucz skanlatorów</string>
     <string name="pref_webtoon_disable_zoom_out">Wyłącz oddalenie</string>
@@ -808,4 +806,14 @@
     <string name="upcoming_calendar_next">Następny miesiąc</string>
     <string name="upcoming_calendar_prev">Poprzedni miesiąc</string>
     <string name="label_upcoming">Nadchodzący</string>
+    <string name="file_picker_uri_permission_unsupported">Nie udało się uzyskać dostępu do folderu. Aplikacja może się zachowywać nieprzewidywalnie.</string>
+    <string name="pref_flash_duration_summary">%1$s ms</string>
+    <string name="pref_flash_duration">Długość migania</string>
+    <string name="pref_flash_with">Miganie na</string>
+    <string name="pref_flash_style_white_black">Biały i czarny</string>
+    <string name="pref_flash_style_black">Czarny</string>
+    <string name="pref_flash_style_white">Biały</string>
+    <string name="manga_interval_expected_update_null">Ta manga jest zakończona lub nie ma przewidywanej daty wydania.</string>
+    <string name="pref_flash_page_interval">Migaj co</string>
+    <string name="pref_display_profile">Niestandardowy profil</string>
 </resources>

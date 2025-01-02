@@ -1,10 +1,11 @@
+import mihon.buildlogic.generatedBuildDir
 import mihon.buildlogic.tasks.getLocalesConfigTask
-import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
+import org.jetbrains.kotlin.gradle.ExperimentalKotlinGradlePluginApi
 
 plugins {
     id("mihon.library")
-    id("dev.icerock.mobile.multiplatform-resources")
     kotlin("multiplatform")
+    alias(libs.plugins.moko)
     id("com.github.ben-manes.versions")
 }
 
@@ -20,15 +21,24 @@ kotlin {
             }
         }
     }
+
+    @OptIn(ExperimentalKotlinGradlePluginApi::class)
+    compilerOptions {
+        freeCompilerArgs.add("-Xexpect-actual-classes")
+    }
 }
+
+val generatedAndroidResourceDir = generatedBuildDir.resolve("android/res")
 
 android {
     namespace = "tachiyomi.i18n"
 
     sourceSets {
-        named("main") {
-            res.srcDir("src/commonMain/resources")
-        }
+        val main by getting
+        main.res.srcDirs(
+            "src/commonMain/resources",
+            generatedAndroidResourceDir,
+        )
     }
 
     lint {
@@ -41,14 +51,8 @@ multiplatformResources {
 }
 
 tasks {
-    val localesConfigTask = project.getLocalesConfigTask()
+    val localesConfigTask = project.getLocalesConfigTask(generatedAndroidResourceDir)
     preBuild {
         dependsOn(localesConfigTask)
-    }
-
-    withType<KotlinCompile> {
-        compilerOptions.freeCompilerArgs.addAll(
-            "-Xexpect-actual-classes",
-        )
     }
 }

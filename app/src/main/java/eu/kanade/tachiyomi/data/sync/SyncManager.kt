@@ -84,6 +84,7 @@ class SyncManager(
             chapters = syncOptions.chapters,
             tracking = syncOptions.tracking,
             history = syncOptions.history,
+            extensionRepoSettings = syncOptions.extensionRepoSettings,
             appSettings = syncOptions.appSettings,
             sourceSettings = syncOptions.sourceSettings,
             privateSettings = syncOptions.privateSettings,
@@ -91,19 +92,22 @@ class SyncManager(
             // SY -->
             customInfo = syncOptions.customInfo,
             readEntries = syncOptions.readEntries,
+            savedSearches = syncOptions.savedSearches,
             // SY <--
         )
 
         logcat(LogPriority.DEBUG) { "Begin create backup" }
+        val backupManga = backupCreator.backupMangas(databaseManga, backupOptions)
         val backup = Backup(
-            backupManga = backupCreator.backupMangas(databaseManga, backupOptions),
+            backupManga = backupManga,
             backupCategories = backupCreator.backupCategories(backupOptions),
-            backupSources = backupCreator.backupSources(databaseManga),
+            backupSources = backupCreator.backupSources(backupManga),
             backupPreferences = backupCreator.backupAppPreferences(backupOptions),
             backupSourcePreferences = backupCreator.backupSourcePreferences(backupOptions),
+            backupExtensionRepo = backupCreator.backupExtensionRepos(backupOptions),
 
             // SY -->
-            backupSavedSearches = backupCreator.backupSavedSearches(),
+            backupSavedSearches = backupCreator.backupSavedSearches(backupOptions),
             // SY <--
         )
         logcat(LogPriority.DEBUG) { "End create backup" }
@@ -143,7 +147,7 @@ class SyncManager(
             return
         }
 
-        if (remoteBackup === syncData.backup){
+        if (remoteBackup === syncData.backup) {
             // nothing changed
             logcat(LogPriority.DEBUG) { "Skip restore due to remote was overwrite from local" }
             syncPreferences.lastSyncTimestamp().set(Date().time)
@@ -174,6 +178,7 @@ class SyncManager(
             backupSources = remoteBackup.backupSources,
             backupPreferences = remoteBackup.backupPreferences,
             backupSourcePreferences = remoteBackup.backupSourcePreferences,
+            backupExtensionRepo = remoteBackup.backupExtensionRepo,
 
             // SY -->
             backupSavedSearches = remoteBackup.backupSavedSearches,
@@ -198,7 +203,8 @@ class SyncManager(
                 options = RestoreOptions(
                     appSettings = true,
                     sourceSettings = true,
-                    library = true,
+                    libraryEntries = true,
+                    extensionRepoSettings = true,
                 ),
             )
 

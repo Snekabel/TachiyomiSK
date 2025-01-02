@@ -402,7 +402,7 @@
     <string name="chapter_settings">Kapittelinnstillinger</string>
     <string name="set_chapter_settings_as_default">Sett som standard</string>
     <string name="no_chapters_error">Fant ingen kapitler</string>
-    <string name="information_webview_outdated">Oppdater WebView-programmet for bedre kompabilitet</string>
+    <string name="information_webview_outdated">Oppdater WebView-programmet for bedre kompatibilitet</string>
     <string name="chapter_settings_updated">Oppdaterte standard kapittelinnstillinger</string>
     <string name="confirm_set_chapter_settings">Er du sikker på at du vil lagre disse innstillingene som standard?</string>
     <string name="action_search_settings">Søkeinnstillinger</string>
@@ -592,7 +592,6 @@
     <string name="download_notifier_split_page_path_not_found">Kunne ikke finne filbanen til side %d</string>
     <string name="pref_security_summary">Applås, sikker skjerm</string>
     <string name="pref_advanced_summary">Dump krasjlogger, batterioptimaliseringer</string>
-    <string name="loader_rar5_error">RARv5-formatet støttes ikke</string>
     <string name="missing_storage_permission">Lagringstilgang er ikke gitt</string>
     <string name="error_user_agent_string_invalid">Ugyldig streng for brukeragent</string>
     <string name="wish_list">Ønskeliste</string>
@@ -717,7 +716,6 @@
     <string name="information_cloudflare_help">Trykk her for å få hjelp med Cloudflare</string>
     <string name="download_cache_invalidated">Nedlastingsindeksen er ugyldiggjort</string>
     <string name="create_backup_file_error">Kunne ikke opprette en backup-fil</string>
-    <string name="licensed_manga_chapters_error">Lisensiert - Ingen kapitler å vise</string>
     <string name="track_activity_name">Sporerinnlogging</string>
     <string name="unlock_app_title">Lås opp %s</string>
     <string name="action_move_to_bottom_all_for_series">Flytt serien til bunnen</string>
@@ -796,4 +794,8 @@
     <string name="manga_interval_expected_update_soon">Snart</string>
     <string name="ext_revoke_trust">Fjern tilliten til ukjente utvidelser</string>
     <string name="action_open_repo">Åpne pakkebrønnen</string>
+    <string name="label_upcoming">Kommende</string>
+    <string name="action_add_anyway">Legg til likevel</string>
+    <string name="action_migrate_duplicate">Flytt eksisterende oppføring</string>
+    <string name="action_replace_repo">Erstatt</string>
 </resources>

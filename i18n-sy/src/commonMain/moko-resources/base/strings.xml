@@ -279,7 +279,6 @@
     <string name="wrong_cbz_archive_password">Wrong CBZ archive password</string>
     <string name="encryption_type">Encryption type</string>
     <string name="aes_256">AES 256</string>
-    <string name="aes_192">AES 192</string>
     <string name="aes_128">AES 128</string>
     <string name="standard_zip_encryption">Standard zip encryption (fast but insecure)</string>
 
@@ -348,6 +347,9 @@
     <string name="action_share_second_page">Share second page</string>
     <string name="action_save_combined_page">Save combined page</string>
     <string name="action_share_combined_page">Share combined page</string>
+    <string name="action_copy_first_page">Copy first page</string>
+    <string name="action_copy_second_page">Copy second page</string>
+    <string name="action_copy_combined_page">Copy combined page</string>
 
     <!-- Reader Sharing -->
     <string name="share_pages_info">%1$s: %2$s, pages %3$s</string>
@@ -393,13 +395,17 @@
 
     <!-- Entry Info Edit -->
     <string name="reset_tags">Reset Tags</string>
-    <string name="add_tag">Add Tag</string>
+    <string name="add_tags">Add Tags</string>
     <string name="reset_info">Reset Info</string>
     <string name="title_hint">Title: %1$s</string>
     <string name="description_hint">Description: %1$s</string>
     <string name="author_hint">Author: %1$s</string>
     <string name="artist_hint">Artist: %1$s</string>
     <string name="thumbnail_url_hint">Thumbnail Url: %1$s</string>
+    <string name="multi_tags_comma_separated">Enter tag(s), seperated by commas.</string>
+    <string name="select_tracker">Select a tracker</string>
+    <string name="entry_not_tracked">Entry is not tracked.</string>
+    <string name="fill_from_tracker">Fill from tracker</string>
 
     <!-- Browse -->
     <!-- Sources Tab -->
@@ -430,11 +436,12 @@
     <!-- Feed Tab -->
     <string name="feed">Feed</string>
     <string name="feed_delete">Delete feed item?</string>
-    <string name="too_many_in_feed">Too many sources in your feed, cannot add more then 10</string>
+    <string name="too_many_in_feed">Too many sources in your feed, cannot add more than 10</string>
     <string name="feed_tab_empty">You don\'t have any sources in your feed, navigate to the top right to add one</string>
     <string name="feed_add">Add %1$s to feed?</string>
 
     <!-- Sort by tags -->
+    <string name="add_tag">Add Tag</string>
     <string name="pref_tag_sorting">Tag sorting tags</string>
     <string name="tag_sorting">Tag sorting</string>
     <string name="action_add_tags_message">Read this! Tags must be exact, there are no partial matches, you cannot do netorare to filter out female:netorare or similar!\nThe style for namespace tags is\n\"female: sole female\"\nwithout quotes!\nAdding multiple variants of the same tag is supported, so feel free to do \"tag: netorare\" for NHentai and \"female: netorare\" for E-Hentai!</string>
@@ -461,6 +468,7 @@
     <string name="use_first_source">Use first source with alternative</string>
     <string name="skip_this_step_next_time">Skip this step next time</string>
     <string name="hide_not_found_entries">Hide not found entries</string>
+    <string name="only_show_updated_entries">Only show entries with new chapters</string>
     <string name="search_parameter">Search parameter (e.g. language:english)</string>
     <string name="latest_">Latest: %1$s</string>
     <string name="migrating_to">migrating to</string>
@@ -510,6 +518,7 @@
     <string name="favorites_sync_removing_galleries">Removing %1$d galleries from remote server</string>
     <string name="favorites_sync_unable_to_delete">Unable to delete galleries from the remote servers!</string>
     <string name="favorites_sync_adding_to_remote">Adding gallery %1$d of %2$d to remote server</string>
+    <string name="favorites_sync_unable_to_add_to_remote">Unable to add gallery to remote server: '%1$s' (GID: %2$s)!</string>
     <string name="favorites_sync_remove_from_local">Removing gallery %1$d of %2$d from local library</string>
     <string name="favorites_sync_add_to_local">Adding gallery %1$d of %2$d to local library</string>
     <string name="favorites_sync_remote_not_exist">Remote gallery does not exist, skipping: %1$s!</string>
@@ -676,6 +685,7 @@
     <string name="mangadex_push_favorites_to_mangadex_summary">Syncs any non MdList tracked entries to MangaDex as reading.</string>
     <string name="mangadex_similar">MangaDex similar</string>
     <string name="community_recommendations">Community recommendations</string>
+    <string name="alt_titles">Alternative Titles</string>
 
     <!-- Scanlator filters -->
     <string name="select_scanlators">Scanlator groups to show</string>

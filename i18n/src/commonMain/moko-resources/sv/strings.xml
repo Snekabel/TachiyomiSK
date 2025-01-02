@@ -610,7 +610,6 @@
     <string name="pref_user_agent_string">Standardsträng för användaragent</string>
     <string name="pref_reset_user_agent_string">Återställ standardsträngen för användaragent</string>
     <string name="action_remove_everything">Ta bort allt</string>
-    <string name="loader_rar5_error">RARv5 formatet stöds inte</string>
     <string name="appwidget_updates_description">Se dina nyligen uppdaterade biblioteket inlägg</string>
     <string name="appwidget_unavailable_locked">Widget är inte tillgänglig när applåset är aktiverat</string>
     <string name="update_already_running">En uppdatering pågår redan</string>
@@ -717,7 +716,6 @@
     <string name="pref_update_only_in_release_period">Förutspå nästa releaseperiod</string>
     <string name="intervals_header">Intervaller</string>
     <string name="create_backup_file_error">Kunde inte skapa en backup-fil</string>
-    <string name="licensed_manga_chapters_error">Licensierad - Inga kapitel att visa</string>
     <string name="track_activity_name">Spårar-inloggning</string>
     <string name="exception_offline">Ingen internet anslutning</string>
     <string name="exception_http">HTTP %d, kolla på webbsida i WebView</string>
@@ -810,4 +808,16 @@
     <string name="action_view_upcoming">Visa kommande uppdateringar</string>
     <string name="upcoming_guide">Kommande guide</string>
     <string name="file_picker_uri_permission_unsupported">Misslyckades med att skaffa beständig mappåtkomst. Appen kan bete sig oväntat.</string>
+    <string name="manga_interval_expected_update_null">Denna manga är antingen avslutad, eller så finns inget förutsebart publiceringsdatum.</string>
+    <string name="pref_flash_duration">Blink varaktighet</string>
+    <string name="pref_flash_duration_summary">%1$s ms</string>
+    <string name="pref_flash_page_interval">Blinka var</string>
+    <string name="pref_flash_with">Blinka med</string>
+    <string name="pref_flash_style_black">Svart</string>
+    <string name="pref_flash_style_white">Vitt</string>
+    <string name="pref_flash_style_white_black">Svart och vitt</string>
+    <string name="invalid_backup_file_unknown">Säkerhetskopierings fil är korrupt</string>
+    <string name="invalid_backup_file_json">JSON säkerhetskopering stöds inte</string>
+    <string name="extensionRepo_settings">Tilläggsförråd</string>
+    <string name="action_copy_link">Kopiera länk</string>
 </resources>

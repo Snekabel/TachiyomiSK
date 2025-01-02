@@ -610,7 +610,6 @@
     <string name="pref_user_agent_string">Untaian ejen pengguna lalai</string>
     <string name="pref_reset_user_agent_string">Set semula untaian ejen pengguna lalai</string>
     <string name="action_remove_everything">Buang semuanya</string>
-    <string name="loader_rar5_error">Format RARv5 tidak disokong</string>
     <string name="appwidget_unavailable_locked">Widget tidak tersedia apabila kekunci aplikasi digunakan</string>
     <string name="appwidget_updates_description">Lihat kemas kini entri pustaka terkini anda</string>
     <string name="update_already_running">Kemas kini sedang berjalan</string>
@@ -713,7 +712,6 @@
     <string name="delete_downloaded">Padam dimuat turun</string>
     <string name="has_results">Mempunyai hasil</string>
     <string name="create_backup_file_error">Tidak boleh menghasilkan fail sandaran</string>
-    <string name="licensed_manga_chapters_error">Berlesen - Tiada bab untuk ditayangkan</string>
     <string name="exception_unknown_host">Tidak dapat mencapai %s</string>
     <string name="syncing_library">Menyelaraskan pustaka</string>
     <string name="library_sync_complete">Pustaka selesai diselaraskan</string>

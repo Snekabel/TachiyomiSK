@@ -75,7 +75,7 @@ import tachiyomi.source.local.isLocal
 import uy.kohesive.injekt.Injekt
 import uy.kohesive.injekt.api.get
 
-object LibraryTab : Tab {
+data object LibraryTab : Tab {
 
     override val options: TabOptions
         @Composable
@@ -165,13 +165,14 @@ object LibraryTab : Tab {
                     },
                     onClickSyncNow = {
                         if (!SyncDataJob.isRunning(context)) {
-                            SyncDataJob.startNow(context)
+                            SyncDataJob.startNow(context, manual = true)
                         } else {
                             context.toast(SYMR.strings.sync_in_progress)
                         }
                     },
                     // SY -->
                     onClickSyncExh = screenModel::openFavoritesSyncDialog.takeIf { state.showSyncExh },
+                    isSyncEnabled = state.isSyncEnabled,
                     // SY <--
                     searchQuery = state.searchQuery,
                     onSearchQueryChange = screenModel::search,
@@ -333,8 +334,8 @@ object LibraryTab : Tab {
         // SY -->
         SyncFavoritesProgressDialog(
             status = screenModel.favoritesSync.status.collectAsState().value,
-            setStatusIdle = { screenModel.favoritesSync.status.value = FavoritesSyncStatus.Idle(context) },
-            openManga = { navigator.push(MangaScreen(it.id)) },
+            setStatusIdle = { screenModel.favoritesSync.status.value = FavoritesSyncStatus.Idle },
+            openManga = { navigator.push(MangaScreen(it)) },
         )
         // SY <--
 
